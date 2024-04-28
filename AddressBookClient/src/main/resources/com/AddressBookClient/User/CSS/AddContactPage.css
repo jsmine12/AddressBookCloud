@@ -1,0 +1,36 @@
+RadioButton,TextField,Button{
+    -fx-focus-color: #c8c8c8;
+    -fx-faint-focus-color: transparent;
+    -fx-cell-focus-inner-border: transparent;
+    -fx-cell-focus-color: transparent;
+}
+TextField,Button{
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+}
+Label{
+    -fx-pref-width: 50px;
+    -fx-pref-height: 30px;
+}
+TextField{
+    -fx-pref-width: 150px;
+    -fx-pref-height: 30px;
+}
+ComboBox{
+    -fx-pref-width: 50px;
+}
+.one,.two,.three{
+    -fx-pref-height: 60px;
+    -fx-pref-width: 500px;
+}
+HBox>HBox{
+    -fx-pref-width: 250px;
+    -fx-alignment: CENTER;
+}
+.three{
+    -fx-alignment: CENTER;
+}
+Button{
+    -fx-pref-width: 55px;
+    -fx-pref-height: 35px;
+}

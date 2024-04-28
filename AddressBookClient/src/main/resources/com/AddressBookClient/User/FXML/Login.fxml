@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.AddressBookClient.User.LoginController" prefHeight="200" prefWidth="375"
+      styleClass="VboxPane" stylesheets="@../CSS/Login.css">
+    <HBox prefHeight="70" spacing="20"  alignment="CENTER">
+        <Label prefWidth="40" prefHeight="30" text="账号"/>
+        <TextField fx:id="AccountTextField" prefWidth="200" prefHeight="30" promptText="请输入账号"/>
+    </HBox>
+    <HBox prefHeight="40" spacing="20"  alignment="CENTER">
+        <Label  alignment="CENTER" prefWidth="40" prefHeight="30"  text="密 码"/>
+            <PasswordField fx:id="PasswordTextField" prefWidth="200" prefHeight="30"  promptText="请输入密码" visible="true" managed="true" />
+            <TextField fx:id="VisiblePasswordField" prefWidth="200" prefHeight="30"  visible="false" managed="false" />
+    </HBox>
+    <HBox prefHeight="40" >
+            <HBox prefWidth="188"  style="-fx-alignment: CENTER-RIGHT">
+                <CheckBox  text="显示密码" fx:id="checkBox1" onAction="#togglePasswordVisibility">
+                </CheckBox>
+            </HBox>
+            <HBox prefWidth="187" alignment="CENTER_LEFT" >
+                <CheckBox text="管理员" fx:id="checkBox2">
+                    <HBox.margin>
+                        <Insets left="30"/>
+                    </HBox.margin>
+                </CheckBox>
+            </HBox>
+    </HBox>
+    <HBox prefHeight="70" >
+        <Button  prefWidth="50" prefHeight="30" text="注册" onAction="#handleSignUpButtonClick" >
+            <HBox.margin>
+                <Insets left="100" top="15"/>
+            </HBox.margin>
+        </Button>
+        <Button prefWidth="50" prefHeight="30" text="登录" onAction="#handleLoginButtonClick" >
+            <HBox.margin>
+                <Insets left="70" top="15"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

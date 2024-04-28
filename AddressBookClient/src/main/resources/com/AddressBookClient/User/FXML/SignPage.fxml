@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.AddressBookClient.User.SignPageController" prefHeight="200" prefWidth="375"
+      styleClass="VboxPane" stylesheets="@../CSS/SignPage.css">
+    <HBox prefHeight="70" spacing="20"  alignment="CENTER">
+        <Label  prefWidth="40" prefHeight="30" text="账号"/>
+        <TextField fx:id="AccountTextField" prefWidth="200" prefHeight="30" promptText="请输入账号"/>
+    </HBox>
+    <HBox prefHeight="40" spacing="20"  alignment="CENTER">
+        <Label  alignment="CENTER" prefWidth="40" prefHeight="30" text="密 码"/>
+        <TextField fx:id="PasswordField" prefWidth="200" prefHeight="30" promptText="请输入密码"/>
+    </HBox>
+    <HBox prefHeight="60"  spacing="20"  alignment="CENTER">
+        <Label text="验证码"  prefWidth="40" prefHeight="30" >
+
+        </Label>
+        <HBox alignment="CENTER_LEFT"  prefWidth="200">
+            <AnchorPane>
+                <StackPane fx:id="image_container" layoutY="10" onMouseClicked="#handleMouseClickToSwitchImages">
+                    <ImageView fx:id="IdentifyImage" fitWidth="100" fitHeight="30">
+                        <Image  url="@../../IMG/1.png" />
+                    </ImageView>
+                </StackPane>
+            </AnchorPane>
+            <TextField fx:id="VerifyTextField" promptText="输入验证码"  prefWidth="80" prefHeight="30">
+                <HBox.margin>
+                    <Insets left="20"/>
+                </HBox.margin>
+            </TextField>
+        </HBox>
+    </HBox>
+    <HBox prefHeight="50"  >
+        <Button prefWidth="50" prefHeight="30" text="返回" onAction="#handleBackButtonClick"  >
+            <HBox.margin>
+                <Insets left="100"/>
+            </HBox.margin>
+        </Button>
+        <Button prefWidth="50" prefHeight="30" text="提交" onAction="#handleSubmitButtonClick" >
+            <HBox.margin>
+                <Insets left="70"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

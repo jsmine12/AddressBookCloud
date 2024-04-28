@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.AddressBookClient.User.AddContactPageController"
+            prefHeight="190.0" prefWidth="500.0"
+            stylesheets="@../CSS/AddContactPage.css" >
+    <fx:define>
+        <ToggleGroup fx:id="group" />
+    </fx:define>
+
+    <VBox>
+        <HBox styleClass="one">
+            <HBox>
+                <Label text="姓名：" prefWidth="50" prefHeight="30" />
+                <TextField fx:id="NameTextField" promptText="请输入姓名"/>
+            </HBox>
+            <HBox style="-fx-alignment: CENTER-LEFT">
+                <Label text="性别：">
+                    <HBox.margin>
+                        <Insets left="25" />
+                    </HBox.margin>
+                </Label>
+                    <RadioButton text="男" fx:id="radioButton1" toggleGroup="$group" selected="true"/>
+                    <RadioButton text="女" fx:id="radioButton2" toggleGroup="$group" >
+                        <HBox.margin>
+                            <Insets left="10" />
+                        </HBox.margin>
+                    </RadioButton>
+            </HBox>
+        </HBox>
+        <HBox styleClass="two">
+            <HBox>
+                <Label text="年龄：" />
+                <TextField fx:id="AgeTextField" promptText="请输入年龄"/>
+            </HBox>
+            <HBox>
+                <Label text="电话："/>
+                <TextField fx:id="TelTextField" promptText="请输入电话"/>
+            </HBox>
+        </HBox>
+        <HBox styleClass="three" style=" -fx-pref-height: 70px;">
+           <Button text="提交" onAction="#handleSubmitButtonClick"></Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

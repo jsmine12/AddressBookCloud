@@ -1,0 +1,20 @@
+TextField,Button{
+    -fx-focus-color: #c8c8c8;
+    -fx-faint-focus-color: transparent;
+    -fx-cell-focus-inner-border: transparent;
+    -fx-cell-focus-color: transparent;
+}
+.one Label{
+    -fx-font-size: 13px;
+}
+.one,.two,.three{
+    -fx-pref-width:300;
+    -fx-pref-height: 50;
+    -fx-alignment: CENTER;
+}
+TextField,.two Label{
+    -fx-pref-height: 25px;
+}
+.two Label{
+    -fx-font-size: 10px;
+}

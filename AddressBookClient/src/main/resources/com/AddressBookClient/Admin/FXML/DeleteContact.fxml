@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.AddressBookClient.Admin.AdminDeleteContactController"
+            prefHeight="150.0" prefWidth="300.0"
+            stylesheets="@../../User/CSS/DeleteContact.css">
+    <VBox>
+        <HBox styleClass="one">
+            <Label text="请输入你要删除用户的账号"></Label>
+        </HBox>
+        <HBox styleClass="two">
+            <Label text="账号："/>
+            <TextField fx:id="idTextField">
+                <HBox.margin>
+                    <Insets left="5"/>
+                </HBox.margin>
+            </TextField>
+        </HBox>
+        <HBox styleClass="three">
+            <Button text="确定" onAction="#handleDeleteContactButtonClick"/>
+            <Button text="取消" onAction="#handleCloseDialogButtonClick">
+                <HBox.margin>
+                    <Insets left="40"/>
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

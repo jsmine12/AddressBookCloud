@@ -1,0 +1,6 @@
+RadioButton,TextField,Button{
+    -fx-focus-color: #c8c8c8;
+    -fx-faint-focus-color: transparent;
+    -fx-cell-focus-inner-border: transparent;
+    -fx-cell-focus-color: transparent;
+}
